@@ -62,13 +62,23 @@ void GeraMatrizTransposta::transportarMatriz(int linha, int coluna) {
 }
 
 void GeraMatrizTransposta::transportarMatrizNovo(int linha, int coluna) {
-  int aux;
-  int indice = 1;
-  int tamanho;
+	int aux;
+	int indice = 1;
+	int tamanho;
 
+	if (linha > coluna) {
+		tamanho = linha;
+	} else {
+		tamanho = coluna;
+	}
 
+	int A[tamanho][tamanho];
 
+	for (linha = 0; linha < tamanho; linha++) {
+		for (coluna = 0; coluna < tamanho; coluna++)
+			A[linha][coluna] = 0;
+	}
 
+	int T[linha][coluna];
 }
-
 
