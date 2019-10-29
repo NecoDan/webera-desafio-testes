@@ -76,7 +76,7 @@ void executaProgramaTres() {
 			Util::validaEntradaDados(qtdeColunas,
 					"Insira um valor MAIOR que zero para definir a qtde de COLUNAS da MATRIZ: ");
 
-//	GeraMatrizTransposta::transportarMatriz(qtdeLinhas, qtdeColunas);
+	//	GeraMatrizTransposta::transportarMatriz(qtdeLinhas, qtdeColunas);
 	GeraMatrizTransposta::transportarMatrizNovo(qtdeLinhas, qtdeColunas);
 }
 

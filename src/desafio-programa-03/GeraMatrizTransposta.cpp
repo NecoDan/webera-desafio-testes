@@ -61,15 +61,18 @@ void GeraMatrizTransposta::transportarMatriz(int linha, int coluna) {
 	printf("\n");
 }
 
-void GeraMatrizTransposta::transportarMatrizNovo(int linha, int coluna) {
-	int aux;
+void GeraMatrizTransposta::transportarMatrizNovo(int qtdeLinhas,
+		int qtdeColunas) {
+	int linha = 0;
+	int coluna = 0;
+	int aux = 0;
 	int indice = 1;
-	int tamanho;
+	int tamanho = 0;
 
-	if (linha > coluna) {
-		tamanho = linha;
+	if (qtdeLinhas > qtdeColunas) {
+		tamanho = qtdeLinhas;
 	} else {
-		tamanho = coluna;
+		tamanho = qtdeColunas;
 	}
 
 	int A[tamanho][tamanho];
@@ -79,6 +82,28 @@ void GeraMatrizTransposta::transportarMatrizNovo(int linha, int coluna) {
 			A[linha][coluna] = 0;
 	}
 
-	int T[linha][coluna];
+	printf("\n");
+	printf("Matriz original A ZERADA: \n");
+	for (linha = 0; linha < tamanho; linha++) {
+		for (coluna = 0; coluna < tamanho; coluna++)
+			printf("%d\t", A[linha][coluna]);
+
+		printf("\n\n");
+	}
+
+	for (linha = 0; linha < qtdeLinhas; linha++) {
+		for (coluna = 0; coluna < qtdeLinhas; coluna++) {
+			printf("\nPreencha o valor [%d][%d]\n", linha + 1, coluna + 1);
+//						printf("Digite o valor do elemento [%d,%d] = ", i + 1, j + 1);
+			scanf("%d", &A[linha][coluna]);
+		}
+	}
+
+	printf("\nMatriz inicial\n\n");
+	for (linha = 0; linha < tamanho; linha++) {
+		for (coluna = 0; coluna < tamanho; coluna++)
+			printf("%d\t", A[linha][coluna]);
+		printf("\n\n");
+	}
 }
 
