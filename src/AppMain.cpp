@@ -11,6 +11,7 @@
 #include <math.h>
 #include <string.h>
 #include <vector>
+#include <stdlib.h>
 
 // Demais
 #include "desafio-programa-01/ConversorMilhaEmKm.h"
@@ -39,6 +40,8 @@ void executaProgramaUm() {
 	cout << "\n\n RESULT: \n KM =  " << valorKm << " KM." << endl;
 	cout << " MILHAS =  " << conversorMilhaEmKm.converterMilhasEmKm(valorKm)
 			<< " mi." << endl;
+
+	return;
 }
 
 void executaProgramaDois() {
@@ -76,7 +79,6 @@ void executaProgramaTres() {
 			Util::validaEntradaDados(qtdeColunas,
 					"Insira um valor MAIOR que zero para definir a qtde de COLUNAS da MATRIZ: ");
 
-	//	GeraMatrizTransposta::transportarMatriz(qtdeLinhas, qtdeColunas);
 	GeraMatrizTransposta::transportarMatrizNovo(qtdeLinhas, qtdeColunas);
 }
 
@@ -98,17 +100,15 @@ void executaProgramaQuatro() {
 }
 
 int main() {
-	cout << "Executando Programas Desafios Webera" << endl;
+	cout << "\n\t\t\t Executando Programas Desafios Webera" << endl;
 
-//	executaTeste();
+	executaProgramaUm();
 
-//	executaProgramaUm();
-
-//	executaProgramaDois();
+	executaProgramaDois();
 
 	executaProgramaTres();
 
-//	executaProgramaQuatro();
+	executaProgramaQuatro();
 
 	getchar();
 	return 0;

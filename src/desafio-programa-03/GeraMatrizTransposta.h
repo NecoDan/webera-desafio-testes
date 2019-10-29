@@ -26,10 +26,11 @@ public:
 
 	/*############################# Métodos de Ação #############################*/
 
-	static void transportarMatriz(int linha, int coluna);
+	static void transportarMatrizNovo(int qtdeLinhas, int qtdeColunas);
 
-	static void transportarMatrizNovo(int linha, int coluna);
+private:
 
+	static void transportarMatrizIguais(int qtdeLinhas, int qtdeColunas);
 };
 
 #endif /* DESAFIO_PROGRAMA_03_GERAMATRIZTRANSPOSTA_H_ */
